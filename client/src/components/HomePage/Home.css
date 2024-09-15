@@ -1,0 +1,97 @@
+/* src/Home.css */
+
+/* Container styling */
+.container-homeTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative; /* Ensure the triangle-divider positions correctly */
+    height: 400px;
+  }
+  
+  /* Left side styling */
+  .left-side-homeTop {
+    flex: 1;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .heading-homeTop h1 {
+    font-size: 2.5rem;
+    color: #333; /* Darker color for heading */
+    margin-bottom: 1rem;
+  }
+  
+  .typing-effect-homeTop p {
+    font-size: 1.2rem;
+    color: #555; /* Slightly lighter text color */
+    line-height: 1.5;
+    max-width: 600px; /* Limiting width for better readability */
+    white-space: pre-wrap; /* Preserve whitespace and line breaks */
+  }
+  
+  /* Right side styling */
+  .right-side-homeTop {
+    flex: 1;
+    position: relative; /* Positioning for triangle divider */
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  /* Triangle divider styling */
+  .triangle-divider {
+    position: relative;
+    padding: 1rem;
+    color: #1d72b8;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .triangle-divider::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    transform: translateY(100%);
+  }
+  
+  .company-name {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* Image styling (if used) */
+  .image-homeTop {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+                                  
+
+
+
+  @keyframes scaleText {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2); /* Increase size at the midpoint */
+    }
+  }
+  
+  .scale-animation {
+    animation: scaleText 2s infinite ease-in-out; /* 2 seconds duration, loops infinitely */
+  }
+  
