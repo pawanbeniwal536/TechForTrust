@@ -1,97 +1,162 @@
-/* src/Home.css */
-
-/* Container styling */
+/* Base Container Styling */
 .container-homeTop {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    position: relative; /* Ensure the triangle-divider positions correctly */
-    height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  height: 400px;
+  margin-top: 240px;
+  margin-bottom: 20px;
+}
+
+/* Left Side Styling */
+.left-side-homeTop {
+  flex: 1;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heading-homeTop h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.typing-effect-homeTop p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.5;
+  max-width: 600px;
+  white-space: pre-wrap;
+  text-align: center; /* Center text for better alignment */
+}
+
+/* Right Side Styling */
+.right-side-homeTop {
+  flex: 1;
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+/* Triangle Divider Styling */
+.triangle-divider {
+  position: relative;
+  padding: 1rem;
+  color: #1d72b8;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.triangle-divider::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 100vw solid transparent;
+  border-bottom: 50px solid #1d72b8; /* Adjust the color */
+  transform: translateY(100%);
+}
+
+.company-name {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Image Styling (if used) */
+.image-homeTop {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframes for Animation */
+@keyframes scaleText {
+  0%, 100% {
+    transform: scale(1);
   }
-  
-  /* Left side styling */
-  .left-side-homeTop {
-    flex: 1;
-    padding: 1rem;
-    width: 100%;
-    height: 100%;
+  50% {
+    transform: scale(1.2);
   }
-  
-  .heading-homeTop h1 {
-    font-size: 2.5rem;
-    color: #333; /* Darker color for heading */
-    margin-bottom: 1rem;
+}
+
+.scale-animation {
+  animation: scaleText 2s infinite ease-in-out;
+}
+
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .container-homeTop {
+    flex-direction: column;
+    height: auto; /* Allow height to adjust based on content */
   }
-  
-  .typing-effect-homeTop p {
-    font-size: 1.2rem;
-    color: #555; /* Slightly lighter text color */
-    line-height: 1.5;
-    max-width: 600px; /* Limiting width for better readability */
-    white-space: pre-wrap; /* Preserve whitespace and line breaks */
-  }
-  
-  /* Right side styling */
+
+  .left-side-homeTop,
   .right-side-homeTop {
-    flex: 1;
-    position: relative; /* Positioning for triangle divider */
-    text-align: center;
-    padding: 1rem;
     width: 100%;
-    height: 100%;
-    
-  }
-  
-  /* Triangle divider styling */
-  .triangle-divider {
-    position: relative;
     padding: 1rem;
-    color: #1d72b8;
-    overflow: hidden;
-    display: inline-block;
+    text-align: center; /* Center text for both sections */
   }
-  
-  .triangle-divider::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 100vw solid transparent;
-    transform: translateY(100%);
+
+  .heading-homeTop h1 {
+    font-size: 2rem; /* Slightly smaller font size for tablets */
   }
-  
+
+  .typing-effect-homeTop p {
+    font-size: 1rem; /* Adjust font size for better readability */
+    max-width: 100%; /* Allow text to use full width */
+  }
+
   .company-name {
-    font-size: 4rem;
-    font-weight: bold;
-    margin: 0;
+    font-size: 3rem; /* Adjust font size for tablets */
   }
-  
-  /* Image styling (if used) */
-  .image-homeTop {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-                                  
+}
 
-
-
-  @keyframes scaleText {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2); /* Increase size at the midpoint */
-    }
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .container-homeTop {
+    flex-direction: column;
+    padding: 1rem;
+    height: auto; /* Allow height to adjust based on content */
   }
-  
-  .scale-animation {
-    animation: scaleText 2s infinite ease-in-out; /* 2 seconds duration, loops infinitely */
+
+  .left-side-homeTop,
+  .right-side-homeTop {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center; /* Center text for both sections */
   }
-  
+
+  .heading-homeTop h1 {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .typing-effect-homeTop p {
+    font-size: 0.875rem; /* Adjust font size for better readability on mobile */
+    max-width: 100%; /* Allow text to use full width */
+  }
+
+  .company-name {
+    font-size: 2rem; /* Adjust font size for mobile */
+  }
+
+  .home-top-left-bottom {
+    margin-top: 1rem; /* Adjust margin for mobile */
+  }
+}
+      
