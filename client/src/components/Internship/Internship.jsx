@@ -44,20 +44,29 @@ useEffect(()=>{
   }, [text, isDeleting, loopNum]);
 
   return (
-    <div className='intern-container mt-28'>
-      <header className='h-28 bg-[#606470] content-center text-center ml-6 mr-6 rounded-lg' data-aos='fade-up'>
-        <p className='text-[##f7f7f7] text-4xl font-bold'>
+    <>
+    <div id='internship'  >
+      
+      </div>
+          <div className='intern-container mt-40'>
+      <header className='h-28  content-center text-center ml-6 mr-6 rounded-lg' data-aos='fade-up'>
+        <p className='text-[##f7f7f7] text-5xl font-bold'>
           Internships for {text}
         </p>
       </header>
-      <div className="intern-training-info flex justify-around pt-8 pb-8 bg-[#606470] ml-6 mr-6 rounded-lg mt-1">
-        <div className='p-4 bg-[#363b4e] rounded-lg internship-available'>
-            <p className=' text-white text-center '>Work from Home Internships</p>
-        </div>
-        <div className='p-4 bg-[#363b4e] rounded-lg internship-available'>
-            <p className=' text-white text-center'>Internship With Training</p>
-        </div>
-      </div>
+      <div className="intern-training-info flex justify-around pt-8 pb-8 ml-6 mr-6 rounded-lg mt-1">
+  <div className='p-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg internship-available shadow-lg hover:shadow-xl transition-shadow duration-300'>
+    <p className='text-white text-center text-lg font-semibold tracking-wide'>
+      Work from Home Internships
+    </p>
+  </div>
+  <div className='p-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg internship-available shadow-lg hover:shadow-xl transition-shadow duration-300'>
+    <p className='text-white text-center text-lg font-semibold tracking-wide'>
+      Internship With Training
+    </p>
+  </div>
+</div>
+
       <div className="intern-card-container ">
         {
             InternData.map((data)=>(
@@ -66,6 +75,7 @@ useEffect(()=>{
     }
     </div>
     </div>
+    </>
   );
 };
 

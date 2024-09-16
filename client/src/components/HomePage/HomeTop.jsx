@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css'; // Import the updated CSS file
+import { Link } from 'react-scroll';
 
 const HomeTop = () => {
   const [text, setText] = useState('');
@@ -32,7 +33,7 @@ const HomeTop = () => {
           setText(''); // Clear text before starting again
         }, 500); // Pause duration before starting to type again
       }
-    }, 100); // Adjust typing speed here
+    }, 40); // Adjust typing speed here
 
     return () => clearInterval(typingInterval); // Cleanup interval on unmount
   }, []);
@@ -41,20 +42,33 @@ const HomeTop = () => {
     <div className="container-homeTop flex">
       <div className="left-side-homeTop flex-1 flex flex-col justify-between">
         <div className="heading-homeTop text-center">
-          <p className="bg-white-800 text-5xl mb-4 scale-animation">Welcome! We are hiring</p>
+          <div className="fixed-box">
+            <p className="scale-animation">Welcome! We are Hiring</p>
+          </div>
         </div>
-        <div className="typing-effect-homeTop text-center">
+
+        <div className="typing-effect-homeTop text-center fixed-box-homeTop">
           <p>{text}</p>
         </div>
-        <div className="home-top-left-bottom flex justify-around mt-8">
-          <button className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Internships</button>
-          <button className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">About Us</button>
+        <div className="home-top-left-bottom flex justify-around ">
+          <Link to='internship' className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 cursor-pointer">Internships</Link>
+          <Link to='about' className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 cursor-pointer">About Us</Link>
         </div>
       </div>
-      <div className="right-side-homeTop flex-1">
-        <div className="triangle-divider">
-          <h1 className="company-name">TechForTrust</h1>
+      <div className="right-side-homeTop flex-1 relative">
+        <div className="absolute inset-0 clip-left-diagonal">
+          <img
+            className="w-full h-full object-cover"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcfErvF6ctHhAv6r5cbi0F1BCY_DcsWggsBA&s"
+            alt=""
+          />
         </div>
+      </div>
+
+      <div className="right-side-homeTop2">
+        <img 
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcfErvF6ctHhAv6r5cbi0F1BCY_DcsWggsBA&s"
+            alt="Image" />
       </div>
     </div>
   );

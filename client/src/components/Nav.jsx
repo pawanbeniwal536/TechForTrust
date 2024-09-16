@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleTheme } from '../redux/themeSlice';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-scroll'
 import './Nav.css';
 
 const Nav = () => {
@@ -49,20 +50,20 @@ const Nav = () => {
           className={`md:flex md:space-x-8 items-center absolute md:static top-16 left-0 right-0 bg-gray-900 md:bg-transparent ${menuOpen ? 'flex flex-col services' : 'hidden'
             } md:flex md:flex-row transition-all duration-300 bg-opacity-70 backdrop-blur-md`}
         >
-          <a href="#" className="hover:text-gray-500 text-center py-2 nav-services">
+          <a href="#" className="hover:text-gray-500 text-center py-2 nav-services cursor-pointer">
             Verify
           </a>
-          <a href="#" className="hover:text-gray-500 text-center py-2 nav-services">
+          <Link to="internship" smooth={true} duration={100} className="hover:text-gray-500 text-center py-2 nav-services cursor-pointer">
             Internship
-          </a>
+          </Link>
 
           {/* Dropdown for Services */}
-          <div className="relative group">
-            <a href="#" className="hover:text-gray-500 text-center py-2 nav-link">
+          <div className="relative group cursor-pointer">
+            <a href="#" className="hover:text-gray-500 text-center py-2 nav-link" >
               Services
             </a>
             <div class=" absolute w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-[#333] ml-8 custom-triangle"></div>
-            <div className="absolute hidden group-hover:flex flex-col bg-gray-800 text-white p-4 rounded-lg mt-2 dropdown-content">
+            <div className="absolute hidden group-hover:flex flex-col bg-[#333] text-white p-4 rounded-lg mt-2 dropdown-content">
               <a href="#" className="hover:bg-gray-700 py-1 px-2">Service 1</a>
               <a href="#" className="hover:bg-gray-700 py-1 px-2">Service 2</a>
               <a href="#" className="hover:bg-gray-700 py-1 px-2">Service 3</a>
@@ -70,10 +71,10 @@ const Nav = () => {
           </div>
 
 
-          <a href="#" className="hover:text-gray-500 text-center py-2 nav-services">
+          <Link to="about" smooth={true} duration={100} className="hover:text-gray-500 text-center py-2 nav-services cursor-pointer">
             About
-          </a>
-          <a href="#" className="hover:text-gray-500 text-center py-2 nav-services">
+          </Link>
+          <a href="#" className="hover:text-gray-500 text-center py-2 nav-services cursor-pointer">
             Contact
           </a>
         </div>

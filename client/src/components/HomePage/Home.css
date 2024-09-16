@@ -3,30 +3,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  /* padding: 2rem; */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   height: 400px;
-  margin-top: 240px;
+  margin-top: 220px;
   margin-bottom: 20px;
 }
 
 /* Left Side Styling */
 .left-side-homeTop {
   flex: 1;
-  padding: 1rem;
+  padding: 2rem;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
 
-.heading-homeTop h1 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 1rem;
 }
 
 .typing-effect-homeTop p {
@@ -38,14 +33,18 @@
   text-align: center; /* Center text for better alignment */
 }
 
+.typing-effect-homeTop{
+  height: 145px;
+  width: 100%;
+}
 /* Right Side Styling */
 .right-side-homeTop {
   flex: 1;
   position: relative;
   text-align: center;
-  padding: 1rem;
+  /* padding: 1rem; */
   width: 100%;
-  height: 100%;
+  height: 95vh;  
 }
 
 /* Triangle Divider Styling */
@@ -55,18 +54,6 @@
   color: #1d72b8;
   overflow: hidden;
   display: inline-block;
-}
-
-.triangle-divider::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 100vw solid transparent;
-  border-bottom: 50px solid #1d72b8; /* Adjust the color */
-  transform: translateY(100%);
 }
 
 .company-name {
@@ -93,17 +80,14 @@
   }
 }
 
-.scale-animation {
-  animation: scaleText 2s infinite ease-in-out;
-}
+
 
 /* Responsive Styles */
 
 /* Tablet Styles */
 @media (max-width: 1024px) {
   .container-homeTop {
-    flex-direction: column;
-    height: auto; /* Allow height to adjust based on content */
+                
   }
 
   .left-side-homeTop,
@@ -159,4 +143,72 @@
     margin-top: 1rem; /* Adjust margin for mobile */
   }
 }
-      
+
+
+
+  .clip-left-diagonal {
+  clip-path: polygon(10% 0px, 100% 0%, 100% 100%, 0px 100%)
+  }
+
+
+  .heading-homeTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Add some margin below */
+  }
+  
+  .fixed-box {
+    width: 350px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    border-radius: 10px; /* Optional: for a rounded box */
+    overflow: hidden; /* Hide any overflow from scaling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .fixed-box p {
+    font-size: 2.2rem; /* Fixed size text */
+    margin: 0;
+  }
+  
+  .scale-animation {
+    animation: scaleText 2s infinite ease-in-out;
+    display: inline-block;
+  }
+  
+  /* Keyframes for Animation */
+  @keyframes scaleText {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  
+
+  .right-side-homeTop2{
+    display: none;
+  }
+
+  @media (max-width:768px) {
+    .right-side-homeTop{
+      display: none;
+    }
+    .right-side-homeTop2{
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin-top: 15px;
+      margin-left: 10px;
+    }
+
+    
+    .right-side-homeTop2 img{
+      width: 100%;
+      height: 100%;
+    }
+
+  }
