@@ -4,6 +4,7 @@ import Chatbot from '../ChatBot'
 import Internship from '../Internship/Internship'
 import About from '../About/About'
 import Footer from '../Footer/Footer'
+import Contact from '../Contact/Contact'
 
 // This home function used for call all the files of the home page
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
         <HomeTop/>
         <About/>
         <Internship/>
+        <Contact/>
         <Chatbot/>
         <Footer/>
       </div>

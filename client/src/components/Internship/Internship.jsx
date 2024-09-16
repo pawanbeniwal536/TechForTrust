@@ -1,47 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import InternData from '../../data/internCoursedata.json'
 import InternshipCards from './InternshipCards'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Internship.css';
+import Typed from 'typed.js';
+
 
 const Internship = () => {
-  const [text, setText] = useState('');
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [loopNum, setLoopNum] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(200);
 
-  const textArray = ["Pursuing/College Students", "Freshers"];
+ const element = useRef(null);
 
 
-  // for scrolling
+ useEffect(() => {
+
+ const typed = new Typed(element.current, {
+  strings: ["Freshers", "Persuing/Collage Students"],
+  typeSpeed: 50,
+  backSpeed: 20,
+  loop: true,
+});
+
+return  () => {
+  typed.destroy();
+}
+}, []);
+
+
+// for scrolling
 
 useEffect(()=>{
   AOS.init({ easing:"ease-in-shine" , duration:800 , delay:0 })
 },[])
-  
-  // function for write a text
-  useEffect(() => {
-    const handleTyping = () => {
-      const i = loopNum % textArray.length;
-      const fullText = textArray[i];
-
-      setText(isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1));
-
-      if (!isDeleting && text === fullText) {
-        setTimeout(() => setIsDeleting(true), 1000); // Pause before deleting
-        setTypingSpeed(100);
-      } else if (isDeleting && text === '') {
-        setIsDeleting(false);
-        setLoopNum(loopNum + 1);
-        setTypingSpeed(200);
-      }
-    };
-
-    const timer = setTimeout(handleTyping, typingSpeed);
-
-    return () => clearTimeout(timer);
-  }, [text, isDeleting, loopNum]);
 
   return (
     <>
@@ -51,7 +41,7 @@ useEffect(()=>{
           <div className='intern-container mt-40'>
       <header className='h-28  content-center text-center ml-6 mr-6 rounded-lg' data-aos='fade-up'>
         <p className='text-[##f7f7f7] text-5xl font-bold'>
-          Internships for {text}
+          Internships for <span className='element' ref={element}></span>
         </p>
       </header>
       <div className="intern-training-info flex justify-around pt-8 pb-8 ml-6 mr-6 rounded-lg mt-1">
