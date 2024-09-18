@@ -74,9 +74,9 @@ const Nav = () => {
           <Link to="about" smooth={true} duration={100} className="hover:text-gray-500 text-center py-2 nav-services cursor-pointer">
             About
           </Link>
-          <a href="#" className="hover:text-gray-500 text-center py-2 nav-services cursor-pointer">
+          <Link to="contact" smooth={true} duration={100} className="hover:text-gray-500 text-center py-2 nav-services cursor-pointer">
             Contact
-          </a>
+          </Link>
         </div>
 
         {/* Menu icon for mobile */}
