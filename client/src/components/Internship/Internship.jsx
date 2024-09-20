@@ -38,7 +38,7 @@ useEffect(()=>{
     <div id='internship'  >
       
       </div>
-          <div className='intern-container mt-40'>
+          <div className='intern-container mt-20'>
       <header className='h-28  content-center text-center ml-6 mr-6 rounded-lg' data-aos='fade-up'>
         <p className=' text-5xl font-bold'>
           Internships for <span className='element' ref={element}></span>

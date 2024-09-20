@@ -29,7 +29,7 @@ const Contact = () => {
     <div id="contact" className="contact-section-home p-10 pt-28  text-gray-900 dark:text-white transition-colors duration-300">
       <h2 className="text-5xl font-bold mb-6 text-center animate-fade-in-down">Contact Us</h2>
       <p className="contact-description text-center mb-10 text-lg animate-fade-in-up">
-Welcome ! Thanks for Contacting to us . <span ref={el}></span>
+  Welcome ! Thanks for Contacting to us . <span ref={el}></span>
       </p>
       <form className="contact-form-home max-w-lg mx-auto space-y-6">
         <div className="form-group">

@@ -59,15 +59,14 @@ const Nav = () => {
 
           {/* Dropdown for Services */}
           <div className="relative group cursor-pointer">
-            <a href="#" className="hover:text-gray-500 text-center py-2 nav-link" >
+            <Link to="services"smooth={true} duration={100} className="hover:text-gray-500 text-center py-2 nav-link" >
               Services
-            </a>
-            <div class=" absolute w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-[#333] ml-8 custom-triangle"></div>
+            </Link>
+            {/* <div class=" absolute w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-[#333] ml-8 custom-triangle"></div>
             <div className="absolute hidden group-hover:flex flex-col bg-[#333] text-white p-4 rounded-lg mt-2 dropdown-content">
               <a href="#" className="hover:bg-gray-700 py-1 px-2">Service 1</a>
               <a href="#" className="hover:bg-gray-700 py-1 px-2">Service 2</a>
-              <a href="#" className="hover:bg-gray-700 py-1 px-2">Service 3</a>
-            </div>
+            </div> */}
           </div>
 
 

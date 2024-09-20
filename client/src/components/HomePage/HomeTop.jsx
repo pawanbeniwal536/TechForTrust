@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 
 const HomeTop = () => {
   const [text, setText] = useState('');
-  const fullText = "Welcome to our website! Here, you'll find a variety of content that showcases our work, products, and services. We aim to provide an exceptional user experience and hope you enjoy exploring what we have to offer. Thank you for visiting us!";
+  const fullText = " Here, you'll find a variety of content that showcases our work, products, and services. We aim to provide an exceptional user experience and hope you enjoy exploring what we have to offer. Thank you for visiting us!";
 
   useEffect(() => {
     let index = 0;
@@ -48,7 +48,7 @@ const HomeTop = () => {
         </div>
 
         <div className="typing-effect-homeTop text-center fixed-box-homeTop">
-          <p>{text}</p>
+          <p>Welcome to our webite ! {text}</p>
         </div>
         <div className="home-top-left-bottom flex justify-around ">
           <Link to='internship' className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 cursor-pointer">Internships</Link>
