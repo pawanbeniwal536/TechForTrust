@@ -17,7 +17,7 @@ const InternshipCards = ({ img, title }) => {
 
       {/* Enroll Now Button */}
       <a 
-        href="#" 
+        href="https://forms.gle/z1p7zYR9Juekuy327" 
         className="mt-4 px-6 py-2 bg-white text-blue-600 dark:bg-blue-500 dark:text-[#233142] rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-blue-400 transition-colors duration-300"
       >
         Enroll Now

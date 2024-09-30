@@ -3,16 +3,17 @@ import AOS from 'aos';
 import './About.css';
 import 'aos/dist/aos.css';
 import Nav from '../Nav';
+import Pawan from '../../TeamMemberImage/Pawan.jpeg'
 
 const About = () => {
  
 
   const imageSets = [
     [
-      { src: '/Ankit.png', alt: 'Ankit' , role:"CEO",url:"https://www.linkedin.com/in/ankitsingh1421/"},
-      { src: '/pawan.png', alt: 'Pawan',role:"DIRECTOR" },
-      { src: '/vishesh.png', alt: 'Vishesh ' ,role:"MANAGER"},
-      { src: '/sakshi.jpeg', alt: 'Sakshi ',role:"HR EXECUTIVE" },
+      { src: '', alt: 'Ankit' , role:"FOUNDER",url:"https://www.linkedin.com/in/ankitsingh1421/"},
+      { src: Pawan, alt: 'Pawan',role:"CEO" },
+      { src: '', alt: 'Vishesh ' ,role:"DIRECTOR"},
+      { src: '/', alt: 'Sakshi ',role:"MANAGER" },
 
     ],
     [
@@ -71,11 +72,11 @@ const About = () => {
 
       {/* Features Section */}
       <div data-aos="fade-up" className="flex justify-evenly max-sm:flex-col p-20">
-        {['Innovative Solutions', 'Hands-On Learning', 'Affordable Pricing', 'Efficient Implementation'].map((feature, index) => (
+        {[ 'Hands-On Learning', 'Affordable Pricing', 'Efficient Implementation'].map((feature, index) => (
           <div key={index} className="flex flex-col mt-20">
             <img
               alt={feature}
-              src={`https://d20rzw95v74l8a.cloudfront.net/aboutus/Icon%20(${index}).webp`}
+              src={`https://d20rzw95v74l8a.cloudfront.net/aboutus/Icon%20(${index+1}).webp`}
               className="self-center"
               width={70}
               height={70}
@@ -138,7 +139,7 @@ const About = () => {
       </div>
 
       {/* Mission Section */}
-      <div className="flex justify-evenly flex-row-reverse mb-28">
+      <div className="flex justify-evenly flex-row-reverse mb-28 mx-5">
         <img
           alt="Mission "
           src="https://d20rzw95v74l8a.cloudfront.net/aboutus/theme1.webp"
@@ -184,6 +185,8 @@ const About = () => {
           height="150"
           className="h-[150px] w-auto"
         />
+        <p> {image.alt}</p>
+        <p className='text-gray-500'>{image.role}</p>
       </a>
     ))}
   </div>
