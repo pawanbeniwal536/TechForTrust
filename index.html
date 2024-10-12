@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate of Completion</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f0f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .certificate-container {
+      background-color: white;
+      padding: 40px;
+      max-width: 900px;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    /* Main content area with a solid border */
+    .certificate-content {
+      padding: 30px;
+      border: 5px solid #34495e; /* Inner solid dark border */
+      border-radius: 8px;
+      position: relative;
+      background-color: white;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Sun badge image */
+    .sun-badge {
+      position: absolute;
+      top: -60px; /* Position above the certificate */
+      left: 50%;
+      transform: translateX(-50%); /* Center the badge */
+      width: 80px; /* Width of the sun badge */
+      height: 80px; /* Height of the sun badge */
+      background-image: url('https://static1.squarespace.com/static/5efc1b0c84200a4b4060842f/t/65a2ac79249f964bbfb59782/1705159807697/VIP+award+winner.png?format=1500w');
+      background-size: cover; /* Cover the entire box with the image */
+      background-repeat: no-repeat; /* Prevent repeating the image */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Certificate title and student details */
+    .certificate-title {
+      font-size: 36px;
+      font-weight: bold;
+      color: #34495e;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2980b9;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .student-name {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2c3e50;
+      margin: 20px 0;
+      border-bottom: 2px solid #2980b9;
+      padding-bottom: 5px;
+    }
+
+    .details {
+      font-size: 20px;
+      color: #2c3e50;
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative; /* To position the sun badge correctly */
+    }
+
+    .logo h1 {
+      display: inline-block; /* Keep logo and badge inline */
+      margin-right: 10px; /* Space between logo and badge */
+    }
+
+    /* Decorative Elements */
+    .decorative-line {
+      height: 2px;
+      background-color: #2980b9;
+      width: 50%;
+      margin: 20px auto;
+    }
+
+    /* Signature section styling */
+    .signature-section {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .signature-box {
+      text-align: center;
+      width: 45%;
+    }
+
+    .signature-box img {
+      width: 120px;
+    }
+
+    .signature-box p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #2c3e50;
+    }
+
+    .date-section {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 16px;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="certificate-container">
+    <div class="certificate-content">
+      <div class="logo">
+        <h1>Intern Venture</h1>
+        <div class="sun-badge"></div> <!-- Sun badge image -->
+      </div>
+      <h1 class="certificate-title">Certificate of Completion</h1>
+      <h2>Presented to</h2>
+      <p class="student-name">[Student Name]</p>
+      <div class="decorative-line"></div>
+      <p class="details">
+        In recognition of the successful completion of the internship program <br>
+        at <strong>The Intern Venture</strong> from <strong>[Start Date]</strong> to <strong>[End Date]</strong>.
+      </p>
+
+      <div class="signature-section">
+        <div class="signature-box">
+          <p>Signature</p>
+          <p>[CEO Name]</p>
+          <p>CEO, The Intern Venture</p>
+        </div>
+        <div class="signature-box">
+          <p>Date: <strong>[Completion Date]</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

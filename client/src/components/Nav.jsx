@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { toggleTheme } from '../redux/themeSlice';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-scroll'
+import CompanyLogo from '../Assets/Company_Logo.png'
 import './Nav.css';
 
 const Nav = () => {
@@ -42,7 +43,11 @@ const Nav = () => {
           className={`text-xl font-bold transition-colors duration-300 ${theme === 'light' ? 'text-black' : 'text-white'
             }`}
         >
-          Logo
+          <div className="companyLogo">
+            {/* <img src={ CompanyLogo } alt="Logo" /> */}
+            InternVenture
+          </div>
+          
         </div>
 
         {/* Links */}

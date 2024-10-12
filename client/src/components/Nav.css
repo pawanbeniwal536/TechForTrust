@@ -60,6 +60,17 @@ nav .container {
   align-items: center;
 }
 
+.companyLogo img{
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+}
+.companyLogo{
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: 800;
+  font-style:normal;
+}
+
 nav a {
   margin-right: 16px;
   text-decoration: none;
