@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css'; // Import the updated CSS file
 import { Link } from 'react-scroll';
+import Banner from '../../Assets/Banner.jpg'
 
 const HomeTop = () => {
   const [text, setText] = useState('');
@@ -39,7 +40,7 @@ const HomeTop = () => {
   }, []);
 
   return (
-    <div className="container-homeTop flex">
+    <div className="container-homeTop flex" id="home">
       <div className="left-side-homeTop flex-1 flex flex-col justify-between">
         <div className="heading-homeTop text-center">
           <div className="fixed-box">
@@ -59,15 +60,16 @@ const HomeTop = () => {
         <div className="absolute inset-0 clip-left-diagonal">
           <img
             className="w-full h-full object-cover"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcfErvF6ctHhAv6r5cbi0F1BCY_DcsWggsBA&s"
-            alt=""
+            src={Banner}
+
+            alt="Image                                                                        "
           />
         </div>
       </div>
 
       <div className="right-side-homeTop2">
         <img 
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcfErvF6ctHhAv6r5cbi0F1BCY_DcsWggsBA&s"
+        src={Banner}
             alt="Image" />
       </div>
     </div>

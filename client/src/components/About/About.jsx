@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import './About.css';
 import 'aos/dist/aos.css';
-import Nav from '../Nav';
 import Pawan from '../../TeamMemberImage/Pawan.jpeg'
 
 const About = () => {
@@ -57,7 +56,6 @@ const About = () => {
 
   return (
     <div id='about'>
-      <Nav />
       {/* Hero Section */}
       <div className="flex flex-col items-center justify-center text-center pt-36 hero-features-gap">
         <div className="w-[51rem] max-sm:w-[19rem] max-md:w-[35rem] max-lg:w-[42rem]">

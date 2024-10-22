@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import Nav from './components/Nav';
 import AllRoutes from './AllRoutes';
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -14,7 +13,6 @@ const App = () => {
   return (
     <div className="app-container">
       <Router>
-      <Nav /> 
       <AllRoutes/>
       </Router>
     </div>

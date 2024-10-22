@@ -6,17 +6,21 @@ import About from '../About/About'
 import Footer from '../Footer/Footer'
 import Contact from '../Contact/Contact'
 import Services from '../Service/Services'
+import Verify from '../Verify/Verify'
+import Nav from '../Nav'
 
 // This home function used for call all the files of the home page
 const Home = () => {
   return (
     <>
       <div className="hometop-call">
+        <Nav/>
         <HomeTop/>
-        <About/>
+        <About/>                                              
         <Internship/>
         <Services/>
         <Contact/>
+        <Verify/>
         <Chatbot/>
         <Footer/>
       </div>

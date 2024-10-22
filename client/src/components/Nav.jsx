@@ -36,7 +36,7 @@ const Nav = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full p-4 transition-all duration-300 z-50 ${theme === 'light' ? 'bg-white' : 'bg-black'
-        } ${menuOpen ? 'bg-opacity-70 backdrop-blur-lg' : 'bg-transparent'} `}
+        } ${menuOpen ? 'bg-opacity-70 backdrop-blur-lg' : 'bg-transparent'} `} 
     >
       <div className="container mx-auto flex justify-between items-center">
         <div
@@ -45,7 +45,7 @@ const Nav = () => {
         >
           <div className="companyLogo">
             {/* <img src={ CompanyLogo } alt="Logo" /> */}
-            InternVenture
+            <Link to='home' smooth={100} duration={100}className='cursor-pointer'>InternVenture</Link>
           </div>
           
         </div>
@@ -55,9 +55,9 @@ const Nav = () => {
           className={`md:flex md:space-x-8 items-center absolute md:static top-16 left-0 right-0 bg-gray-900 md:bg-transparent ${menuOpen ? 'flex flex-col services' : 'hidden'
             } md:flex md:flex-row transition-all duration-300 bg-opacity-70 backdrop-blur-md`}
         >
-          <a href="#" className="hover:text-gray-500 text-center py-2 nav-services cursor-pointer">
+          <Link to="verify" duration={100} smooth={true} className="hover:text-gray-500 text-center py-2 nav-services cursor-pointer">
             Verify
-          </a>
+          </Link>
           <Link to="internship" smooth={true} duration={100} className="hover:text-gray-500 text-center py-2 nav-services cursor-pointer">
             Internship
           </Link>

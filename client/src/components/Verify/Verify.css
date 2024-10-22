@@ -1,0 +1,147 @@
+/* General Styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.verify-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 20px;
+  /* background-color: #f7f7f7; */
+  transition: background-color 0.3s ease;
+  margin-top: -40px;
+}
+
+/* Dark Mode */
+.dark .verify-container {
+  /* background-color: #1a1a1a; */
+}
+
+.verify-box {
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dark .verify-box {
+  background-color: #333;
+  border: 2px solid #ffffff;
+}
+
+.verify-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.dark .verify-title {
+  color: #f0f0f0;
+}
+
+/* Form Styling */
+.form-label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.dark .form-label {
+  color: #f0f0f0;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.dark .form-input {
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+/* Success and Error Messages */
+.success-message {
+  color: #10b981;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* Certificate Details Styling */
+.certificate-details {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+}
+
+.dark .certificate-details {
+  background-color: #444;
+  color: #f0f0f0;
+}
+
+.certificate-details p {
+  margin-bottom: 0.5rem;
+}
+
+/* Button Styling */
+.btn-primary {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+  transform: translateY(-3px);
+}
+
+.dark .btn-primary {
+  background-color: #1e40af;
+}
+
+.dark .btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+/* Dark Mode for Overall Container */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}

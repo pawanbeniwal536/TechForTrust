@@ -11,7 +11,6 @@ const Internship = () => {
 
  const element = useRef(null);
 
-
  useEffect(() => {
 
  const typed = new Typed(element.current, {
